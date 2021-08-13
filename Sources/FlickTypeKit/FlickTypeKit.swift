@@ -248,8 +248,10 @@ public class FlickType : NSObject {
   
 }
 
+@available(watchOSApplicationExtension 6.0, *)
 internal typealias InvocationCompletionHandler = (String, FlickType.CompletionType) -> Void
 
+@available(watchOSApplicationExtension 6.0, *)
 internal struct TextInputInvocation {
   let suggestions: [String]?
   let suggestionsHandler: ((String) -> [Any]?)?
@@ -262,6 +264,7 @@ internal struct TextInputInvocation {
 }
 
 // TODO: don't add anything to `Array`, redefine as `FlickType.something()`
+@available(watchOSApplicationExtension 6.0, *)
 public extension Array {
   var completionType: FlickType.CompletionType? {
     return compactMap { $0 as? FlickType.CompletionType }.first
