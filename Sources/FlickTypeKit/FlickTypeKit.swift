@@ -6,9 +6,11 @@
 //  Copyright © 2018-2020 Kpaw. All rights reserved.
 //
 
+#if canImport(WatchKit)
 import WatchKit
+#endif
 
-
+@available(watchOSApplicationExtension 6.0, *)
 public extension WKInterfaceController {
   
   // TODO: address case where `presentTextInputController()` or `presentTextInputControllerWithSuggestions()` are called while
@@ -149,6 +151,7 @@ public extension WKInterfaceController {
     
 }
 
+@available(watchOSApplicationExtension 6.0, *)
 public class FlickType : NSObject {
   
   public static let sdkVersion = "2.0.2/swift"
